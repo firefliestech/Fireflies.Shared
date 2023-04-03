@@ -5,12 +5,14 @@ namespace Fireflies.IoC.Autofac;
 
 public class AutofacDependencyResolver : IDependencyResolver {
     private ILifetimeScope _rootContainer = null!;
+    private readonly ILifetimeScopeBuilderExtender? _lifetimeScopeBuilderExtender;
 
     internal AutofacDependencyResolver() {
     }
 
-    public AutofacDependencyResolver(ILifetimeScope rootContainer) {
+    public AutofacDependencyResolver(ILifetimeScope rootContainer, ILifetimeScopeBuilderExtender? lifetimeScopeBuilderExtender = null) {
         _rootContainer = rootContainer;
+        _lifetimeScopeBuilderExtender = lifetimeScopeBuilderExtender;
     }
 
     public IDependencyResolver BeginLifetimeScope(Action<ILifetimeScopeBuilder> builder) {
@@ -18,7 +20,7 @@ public class AutofacDependencyResolver : IDependencyResolver {
 
         var lifetimeScope = _rootContainer.BeginLifetimeScope(x => {
             x.RegisterInstance<IDependencyResolver>(innerContainer);
-            builder(new LifetimeScopeBuilder(x));
+            builder(new LifetimeScopeBuilder(x, _lifetimeScopeBuilderExtender));
         });
 
         innerContainer._rootContainer = lifetimeScope;
