@@ -1,8 +1,11 @@
-﻿using System.Reflection;
+﻿using System.Collections.Concurrent;
+using System.Reflection;
 
 namespace Fireflies.Utility.Reflection;
 
 public static class ReflectionExtensions {
+    private static readonly ConcurrentDictionary<Type, Type?> IsTaskCache = new();
+
     public static Type DiscardTaskFromReturnType(this MethodInfo methodInfo) {
         return methodInfo.ReturnType.DiscardTask();
     }
@@ -21,12 +24,18 @@ public static class ReflectionExtensions {
     public static bool IsTask(this Type type, out Type? returnType) {
         returnType = type;
 
-        if(type.IsGenericType && (type.GetGenericTypeDefinition() == typeof(Task<>) || type.GetGenericTypeDefinition() == typeof(ValueTask<>))) {
-            returnType = type.GetGenericArguments()[0];
-            return true;
-        }
+        var cachedEntry = IsTaskCache.GetOrAdd(type, _ => {
+            if(type.IsGenericType && (type.GetGenericTypeDefinition() == typeof(Task<>) || type.GetGenericTypeDefinition() == typeof(ValueTask<>)))
+                return type.GetGenericArguments()[0];
 
-        return false;
+            return null;
+        });
+
+        if(cachedEntry == null)
+            return false;
+
+        returnType = cachedEntry;
+        return true;
     }
 
     public static bool IsTask(this Type type) {
