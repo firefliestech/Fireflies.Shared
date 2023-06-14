@@ -9,6 +9,10 @@ public class LifetimeScopeBuilder : ILifetimeScopeBuilder {
         _containerBuilder = containerBuilder;
     }
 
+    public TImplementation GetBuilder<TImplementation>() where TImplementation : class {
+        return (TImplementation)(object)_containerBuilder;
+    }
+
     public void RegisterType<T>() where T : class {
         _containerBuilder.Register<T>();
     }
