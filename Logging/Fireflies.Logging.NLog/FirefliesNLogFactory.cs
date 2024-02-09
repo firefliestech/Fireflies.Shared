@@ -4,9 +4,9 @@ using NLog;
 namespace Fireflies.Logging.NLog;
 
 public class FirefliesNLogFactory : IFirefliesLoggerFactory {
-    public IFirefliesLogger GetLogger<T>() {
+    public IFirefliesLogger GetLogger<T>(string? prepend = null, string? append = null) {
         var typeName = GetTypeName<T>();
-        return new FirefliesNLogLogger(LogManager.GetLogger(typeName));
+        return new FirefliesNLogLogger(LogManager.GetLogger(typeName), append, prepend);
     }
 
     private static string GetTypeName<T>() {
