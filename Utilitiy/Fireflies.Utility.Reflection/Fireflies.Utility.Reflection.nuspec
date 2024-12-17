@@ -10,8 +10,5 @@
 		<description>$description$</description>
 		<copyright>$copyright$</copyright>
 		<tags>fireflies utility reflection</tags>
-		<dependencies>
-			<dependency id="Fireflies.IoC.Abstractions" version="$version$" />
-		</dependencies>
 	</metadata>
 </package>

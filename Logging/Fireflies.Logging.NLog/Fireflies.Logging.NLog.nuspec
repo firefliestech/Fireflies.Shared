@@ -12,6 +12,6 @@
   </metadata>
   <dependencies>
     <dependency id="Fireflies.Logging.Abstractions" version="$version$" />
-    <dependency id="NLog" version="5.1.1" />
+    <dependency id="NLog" version="5.3.4" />
   </dependencies>
 </package>

@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{70BC69DD-12CF-44B8-83AC-B547BB1414D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fireflies.Logging.NLog", "Logging\Fireflies.Logging.NLog\Fireflies.Logging.NLog.csproj", "{28DE0AB6-08A2-402F-8846-FE1FA075E18D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fireflies.Logging.Abstractions", "Logging\Fireflies.Logging.Abstractions\Fireflies.Logging.Abstractions.csproj", "{A4EEDCFE-8148-49E0-B3DD-E6AA69A643D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IoC", "IoC", "{8D45F2E7-6331-4307-A5CE-2DB8BC12B532}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fireflies.IoC.Abstractions", "IoC\Fireflies.IoC.Abstractions\Fireflies.IoC.Abstractions.csproj", "{FD302CFB-24F6-4BEB-A55D-8BBF8C416300}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fireflies.IoC.Autofac", "IoC\Fireflies.IoC.Autofac\Fireflies.IoC.Autofac.csproj", "{A1BA1E9A-7CB0-4A8A-BC7E-51CACCCB31EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fireflies.IoC.TinyIoC", "IoC\Fireflies.IoC.TinyIoC\Fireflies.IoC.TinyIoC.csproj", "{11C8EA81-5CEA-42CD-90CF-D17B19DE4B1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utility", "Utility", "{E2434574-F7A1-4BB7-871E-0164C42D543F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fireflies.Utility.Reflection", "Utilitiy\Fireflies.Utility.Reflection\Fireflies.Utility.Reflection.csproj", "{3E5ACCBC-1DB0-4F7E-A053-167FCB22FC08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28DE0AB6-08A2-402F-8846-FE1FA075E18D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28DE0AB6-08A2-402F-8846-FE1FA075E18D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28DE0AB6-08A2-402F-8846-FE1FA075E18D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28DE0AB6-08A2-402F-8846-FE1FA075E18D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4EEDCFE-8148-49E0-B3DD-E6AA69A643D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4EEDCFE-8148-49E0-B3DD-E6AA69A643D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4EEDCFE-8148-49E0-B3DD-E6AA69A643D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4EEDCFE-8148-49E0-B3DD-E6AA69A643D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD302CFB-24F6-4BEB-A55D-8BBF8C416300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD302CFB-24F6-4BEB-A55D-8BBF8C416300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD302CFB-24F6-4BEB-A55D-8BBF8C416300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD302CFB-24F6-4BEB-A55D-8BBF8C416300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1BA1E9A-7CB0-4A8A-BC7E-51CACCCB31EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1BA1E9A-7CB0-4A8A-BC7E-51CACCCB31EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1BA1E9A-7CB0-4A8A-BC7E-51CACCCB31EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1BA1E9A-7CB0-4A8A-BC7E-51CACCCB31EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11C8EA81-5CEA-42CD-90CF-D17B19DE4B1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C8EA81-5CEA-42CD-90CF-D17B19DE4B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11C8EA81-5CEA-42CD-90CF-D17B19DE4B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C8EA81-5CEA-42CD-90CF-D17B19DE4B1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E5ACCBC-1DB0-4F7E-A053-167FCB22FC08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E5ACCBC-1DB0-4F7E-A053-167FCB22FC08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E5ACCBC-1DB0-4F7E-A053-167FCB22FC08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E5ACCBC-1DB0-4F7E-A053-167FCB22FC08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{28DE0AB6-08A2-402F-8846-FE1FA075E18D} = {70BC69DD-12CF-44B8-83AC-B547BB1414D9}
+		{A4EEDCFE-8148-49E0-B3DD-E6AA69A643D0} = {70BC69DD-12CF-44B8-83AC-B547BB1414D9}
+		{FD302CFB-24F6-4BEB-A55D-8BBF8C416300} = {8D45F2E7-6331-4307-A5CE-2DB8BC12B532}
+		{A1BA1E9A-7CB0-4A8A-BC7E-51CACCCB31EE} = {8D45F2E7-6331-4307-A5CE-2DB8BC12B532}
+		{11C8EA81-5CEA-42CD-90CF-D17B19DE4B1E} = {8D45F2E7-6331-4307-A5CE-2DB8BC12B532}
+		{3E5ACCBC-1DB0-4F7E-A053-167FCB22FC08} = {E2434574-F7A1-4BB7-871E-0164C42D543F}
+	EndGlobalSection
+EndGlobal
